@@ -1,0 +1,137 @@
+Inteligencia Artificial - Técnicas ou metodologias
+    - SISTEMAS DE COMPORTAMENTO INTELIGENTE
+        - Base de conhecimento 
+            - Armazenamento de experiência (PROLOG; SMA)
+        - Motor de raciocínio / raciocínio autmatizado (Dedução, indução)
+            - Métodos de busca (força bruta)
+                - Cegos : Amplitude e profundidade
+                - Heuristicos :Subida de enconsta, guloso, A*, Algoritmos Genéticos
+        - Aprendizado de máquina - Reconhecer padrões por repetição amostras
+            - Redes neurais
+
+    - METODOS DE BUSCA
+        - MODELAGEM DO PROBLEMA / SOLUÇÃO
+        1) Estados (inicial/contrutor, ubtermediários/contrutor2, final)
+        2) Regras de transição -> métodos que modificam o objeto
+        3) Restrição (estado que não pode ser geradi)
+        4) Visitados (lista ou uma árvore ou um hasmap)
+        5) Função objetivo
+
+A) Problema das Torres de Hannoi 
+    Estado
+        //toda pilha tem os seguintes comandos : empty, peak, push/add, pop/remove
+        Stack t1 = mew Stack();
+        Stack t2 = mew Stack();
+        Stack t3 = mew Stack();    
+
+
+    Estado Inicial 
+        t1.push(3)
+        t1.push(2)
+        t1.push(1)
+
+    Estado Final ou Função Objetivo/Meta
+        t1.empty() && t2.empty()
+
+Regras de Transição
+    
+    r1 - mover t1 para t2
+    public void moverT1_t2(){
+        t2.push(t1.pop());
+    }
+    r1 - mover t1 para t3
+    public void moverT1_t2(){
+        t3.push(t1.pop());
+    }
+
+    r2 - mover t2 para t1
+    public void moverT2_t1(){
+        t1.push(t2.pop());
+    }
+    r2 - mover t2 para t3
+    public void moverT2_T3(){
+        t3.push(t2.pop());
+    }
+
+    r3 - mover t3 para t1
+    public void moverT3_T1(){
+        t1.push(t3.pop());
+    }
+    r3 - mover t3 para t2
+    public void moverT3_T2(){
+        t2.push(t3.pop());
+    }
+
+Restrição
+    public boolean ehValido(Stack Origem, Stack Destino) {
+        if (Origem.empty()) {
+            return false
+        }
+    }
+    if ((int)Origem.peek() > (int)Destino.peek()){
+        return false;
+    }
+    return true;
+
+Visitados - Lista ou Arvore ou Hashmap
+["[321],[],[]"],["[32],[1],[]"]
+
+B) Problema das Jarras
+
+jr1 suporta 4L
+jr2 suporta 3L
+torneira que jorra água infinitamente
+
+objetivo : Deixar em uma das jarras 2L
+
+class Estado (int j1, int j2) {
+    this.j1 = j1;
+    this.j2 = j2;
+}
+
+public boolean ehMeta () {
+    return ((this.j1 == 2 && this.j2 == 0) || (this.j1 == 0 && this.j2 == 2));
+}
+
+//Encher Jarras
+public void encher j1 () {
+    this.j1 = 4;
+}
+public void encher j2 () {
+    this.j2 = 3;
+}
+
+//Esvaziar Jarras
+public void esvaziar j1 () {
+    this.j1 = 0;
+}
+public void esvaziar j2 () {
+    this.j2 = 0;
+}
+
+//Despejar jarras 
+public void despejar j1_j2() {
+    int j1 = this.j1 = 1;
+    int j2 = this.j2 = 2;
+
+    if(j1 > (3-j2)){
+        j1 = j1 - (3 - j2);
+        j2 = 3;
+    } else {
+        j2 = j1-j2;
+        j1 = 0;
+    }
+}
+
+public void despejar j2_j1() {
+    int j1 = this.j1 = 1;
+    int j2 = this.j2 = 2;
+
+    if(j2 > (4-j1)){
+        j2 = j2 - (4 - j1);
+        j1 = 4;
+    } else {
+        j1 = j1-j2;
+        j2 = 0;
+    }
+}
