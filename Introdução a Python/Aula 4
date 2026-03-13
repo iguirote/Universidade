@@ -1,0 +1,187 @@
+#1 - Um usuário (diabético) de insulina rápida precisa fazer uso do medicamento sempre que for realizar
+#    uma refeição. Assim, faça um programa que receba do usuário sua glicemia do momento (mg/dl),
+#    meta pré-refeição (em geral é 100 mg/dl), fator de sensibilidade (valor inteiro entre 20 a 60). 
+#    A partir desses valores, o programa deve calcular e exibir para o usuário a quantidade de insulina
+#    que ele deverá administrar baseada na equação: 
+#    quantidade_insulina = (glicemia_do_momento - meta_pre_refeicao) / fator_sensibilidade
+
+glicemia = int (input("Insira a glicemia atual em (mg/ml): "))
+meta = int (input("Insira sua meta pré-refeição: "))
+fator = int (input("Insira seu fator de sensibilidade (Entre 20 e 60): "))
+quantidade_insulina = (glicemia - meta) / fator
+print("Quantidade de insulina a ser administrada ",quantidade_insulina," unidade(s)")
+
+#2 - Faça um programa que ajude motoristas calcular e estimar viagens com diferentes tempos de viagem.
+#    O programa deve receber do usuário do sistema (motorista) a distância a ser percorrida e o tempo
+#    desejado da viagem. A partir disso, o programa deve calcular e exibir na tela a velocidade média
+#    necessária.
+
+nome = input("Olá, digite seu nome para começar.")
+distancia = float(input("Qual a distância a ser percorrida (em km)?"))
+tempo = float(input("Qual o tempo desejado da viagem (em horas)?"))
+velocidade = distancia / tempo
+print(nome,"A velocidade média necessária é de", velocidade, "km/h")
+
+#3 - Refaça o programa anterior (refatorar) para que o programa recebe a distância e a velocidade média,
+#    mas calcule e exiba o tempo da viagem.
+nome = input("Olá, digite seu nome para começar.")
+distancia = float(input("Qual a distância a ser percorrida (em km)?"))
+velocidade = float(input("Qual a velocidade média (em km/h)?"))
+tempo = distancia / velocidade
+print(nome,"O tempo da viagem é de", tempo, "horas")
+
+#4 - O volume de um cubo é determinado através do produto da área da base pela altura, 
+#    (mas as arestas do cubo possuem medidas iguais), então temos que:
+#    V = Ab * a ou V = a * a * a → V = a³. A partir disso, faça um programa, adequando as variáveis
+#    para receber medidas de uma piscina (altura, largura e comprimento), para responder o volume de
+#    água necessário para enchê-la.
+
+Altura = float(input("Digite a altura da piscina :"))
+Largura = float(input("Digite a largura da piscina :"))
+Comprimento = float(input("Digite o comprimento da piscina :"))
+total = Altura * Largura * Comprimento
+print("O volume da piscina é : ",total, "cm")
+
+#5 - Faça um programa em linguagem Python que converta metros para centímetros.
+metros = float(input("Digite os metros a serem convertidos."))
+cent = metros * 100
+print(metros,"em centímetros é", cent, "centímetros")
+
+#6 - Construa um programa em Python em que o usuário insira a sigla de um estado brasileiro em que 
+#    uma pessoa nasceu e, em seguida imprima uma das seguintes mensagens: 
+#    Carioca Paulista Mineiro Outros estados
+
+sigla = (input("Insira a sigla de seu estado: ")).upper()
+if sigla == 'RJ':
+    print("Carioca")
+elif sigla == 'SP':
+    print("Paulista")
+elif sigla == 'MG':
+    print("Mineiro")
+else:
+    print("Outros estados")
+
+#7 - Faça um programa Python que receba duas notas, calcule a média aritmética e mostre o resultado.
+#    Além disso, deve mostrar ao lado da média Aprovado (se média >= 7.0) Reprovado (se média <= 3.0),
+#    Exame (se média entre 3.0 e 7.0)
+
+nota1 = float(input("Digite a primeira nota :"))
+nota2 = float(input("Digite a segunda nota :"))
+media = (nota1 + nota2) / 2
+if media >= 7.0:
+    print("Média : ",media, " - Aprovado")
+elif media <= 3.0:
+    print("Média : ",media, " - Reprovado")
+else:
+    print("Média : ",media, " - Exame")
+
+#8 - Faça um programa em Python que manipule listas com números inteiros, representando
+#    valores de glicemia (45 a 450) de um doente diabético. O programa deve receber valores de 
+#    glicemia (um a um) até que o usuário não queira mais cadastrá-los. Os dados digitados
+#    devem ser inseridos na lista listaDadosOriginais.
+
+listaDadosOriginais = []
+while True:
+    opcao = input("Insira a opcao (1 - Cadastrar; 0 - Sair): ")
+
+    if opcao == '1':
+        glicemia = int(input("Insira o valor da glicemia: "))
+        listaDadosOriginais.append(glicemia)
+    elif opcao == '0':
+        break
+    elif opcao !=0 or opcao != 1:
+        print("Opção invalida!")
+print(listaDadosOriginais)
+
+#9 - Faça um complemento no código anterior para copiar a listaDadosOriginais para a
+#     listaDadosOrdenados, que na sequência precisa ser ordenada.
+
+listaDadosOriginais = []
+while True:
+    opcao = input("Insira a opcao (1 - Cadastrar; 0 - Sair): ")
+
+    if opcao == '1':
+        glicemia = int(input("Insira o valor da glicemia: "))
+        listaDadosOriginais.append(glicemia)
+    elif opcao == '0':
+        break
+    elif opcao !=0 or opcao != 1:
+        print("Opção invalida!")
+
+print ("Lista de dados")
+for i in listaDadosOriginais:
+    print(i)
+
+
+#10 - Faça um complemento no código anterior para copiar a listaDadosOriginais para a
+#     listaDadosOrdenados, que na sequência precisa ser ordenada.
+
+listaDadosOriginais = []
+while True:
+    opcao = input("Insira a opcao (1 - Cadastrar; 0 - Sair): ")
+
+    if opcao == '1':
+        glicemia = int(input("Insira o valor da glicemia: "))
+        listaDadosOriginais.append(glicemia)
+    elif opcao == '0':
+        break
+    elif opcao !=0 or opcao != 1:
+        print("Opção invalida!")
+
+print ("Lista de dados")
+for i in listaDadosOriginais:
+    print(i)
+
+listaDadosOrdenados = listaDadosOriginais
+listaDadosOrdenados.sort()
+
+print("\nValores de glicemia ordenados:")
+for i in listaDadosOrdenados:
+    print(i)
+
+#11 - Faça um complemento no código anterior para mostrar o menor e o maior valores
+#     de glicemia cadastrados.
+
+glicemiasOrdenadas.sort()
+print(glicemiasOrdenadas[0])
+print(glicemiasOrdenadas[-1])
+
+#12 - Faça um complemento no código anterior para mostrar a média dos valores de 
+#     glicemia cadastros e na sequência contar e mostrar quantos valores estão abaixo e
+#     acima da média.
+
+listaDadosOriginais = []
+while True:
+    opcao = input("Insira a opcao (1 - Cadastrar; 0 - Sair): ")
+
+    if opcao == '1':
+        glicemia = int(input("Insira o valor da glicemia "))
+        listaDadosOriginais.append(glicemia)
+    elif opcao == '0':
+        break
+    elif opcao !=0 or opcao != 1:
+        print("Opção invalida!")
+
+print ("Lista de dados")
+for i in listaDadosOriginais:
+    print(i)
+
+listaDadosOrdenados = listaDadosOriginais
+listaDadosOrdenados.sort()
+
+print("\nValores de glicemia ordenados:")
+for i in listaDadosOrdenados:
+    print(i)
+
+media = sum(listaDadosOrdenados) / len(listaDadosOrdenados)
+print("Média das glicemias: ",media)
+
+conta = 0
+contb = 0
+
+for i in listaDadosOrdenados:
+    if i < media:
+        conta+=1
+    if i > media:
+        contb+=1
+print("Quantidade de número maiores que a media (",media,"): ",conta," quantidade de números menores que a media: ",contb)
