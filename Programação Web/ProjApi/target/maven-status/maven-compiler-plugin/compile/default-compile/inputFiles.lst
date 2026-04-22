@@ -1,0 +1,13 @@
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\Controller\UsuarioController.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\dto\TelefoneDTORequest.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\dto\TelefoneDTOResponse.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\dto\UsuarioDTOR.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\dto\UsuarioDTOResponse.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\mapper\TelefoneMapper.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\mapper\UsuarioMapper.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\model\Telefone.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\model\Usuario.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\ProjApiApplication.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\Repository\TelefoneRepository.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\Repository\UsuarioRepository.java
+C:\Users\igorm\IdeaProjects\ProjApi\src\main\java\inf\frohlich\projapi\service\UsuarioService.java
