@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titulo}">Exclusão</title>
+    <link rel="stylesheet" href="/css/StyleIndex.css">
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${titulo}">Excluir item</h1>
+    <p th:text="${mensagem}">Tem certeza que deseja excluir este item?</p>
+
+    <div class="actions">
+        <a class="btn danger" th:href="${acaoConfirmar}">Excluir</a>
+        <a class="btn secondary" th:href="${acaoCancelar}">Cancelar</a>
+    </div>
+</div>
+</body>
+</html>

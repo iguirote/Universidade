@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Categorias</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="page">
+    <h1>Cadastro de categorias</h1>
+    <form th:action="@{/categoria/salvar}" th:object="${categoria}" method="post">
+        <input th:field="*{id}" type="hidden">
+
+        <div>
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" th:field="*{nome}">
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Salvar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <div class="nav-links">
+        <a class="btn btn-primary" href="/">Voltar</a>
+        <a class="btn btn-secondary" href="/produto/listar">Ver produtos cadastrados</a>
+        <a class="btn btn-secondary" href="/categoria/listar">Ver categorias cadastradas</a>
+    </div>
+</div>
+</body>
+</html>

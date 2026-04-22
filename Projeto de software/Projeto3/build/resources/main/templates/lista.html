@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="page">
+    <h1>Produtos cadastrados</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Quantidade</th>
+            <th>Imagem</th>
+            <th>Categoria</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+        <tr th:each="p : ${produtos}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.nome}"></td>
+            <td th:text="${p.descricao}"></td>
+            <td th:text="${p.valor}"></td>
+            <td th:text="${p.quantidade}"></td>
+            <td><img th:src="${p.imagem}" alt="Imagem do produto" width="80"></td>
+            <td th:text="${p.categoria != null ? p.categoria.nome : 'Sem categoria'}"></td>
+            <td><a class="btn btn-warning" th:href="@{/produto/editar/{id}(id=${p.id})}">Editar</a></td>
+            <td><a class="btn btn-danger" th:href="@{/produto/confirmar-exclusao/{id}(id=${p.id})}">Excluir</a></td>
+        </tr>
+    </table>
+
+    <div class="nav-links">
+        <a class="btn btn-primary" href="/produto/formulario">Novo produto</a>
+        <a class="btn btn-secondary" href="/">Voltar</a>
+    </div>
+</div>
+</body>
+</html>

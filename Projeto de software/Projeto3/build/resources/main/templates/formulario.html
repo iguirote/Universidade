@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="page">
+    <h1>Cadastro de produtos</h1>
+    <form th:action="@{/produto/salvar}" th:object="${produto}" method="post">
+        <input th:field="*{id}" type="hidden">
+
+        <div>
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" th:field="*{nome}">
+        </div>
+
+        <div>
+            <label for="descricao">Descrição:</label>
+            <input id="descricao" type="text" th:field="*{descricao}">
+        </div>
+
+        <div>
+            <label for="valor">Valor:</label>
+            <input id="valor" type="number" th:field="*{valor}">
+        </div>
+
+        <div>
+            <label for="quantidade">Quantidade:</label>
+            <input id="quantidade" type="number" th:field="*{quantidade}">
+        </div>
+
+        <div>
+            <label for="imagem">Imagem:</label>
+            <input id="imagem" type="text" th:field="*{imagem}">
+        </div>
+
+        <div>
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" th:field="*{categoria.id}">
+                <option value="">Selecione...</option>
+                <option th:each="c : ${categorias}"
+                        th:value="${c.id}"
+                        th:text="${c.nome}"></option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Salvar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <div class="nav-links">
+        <a class="btn btn-primary" href="/">Voltar</a>
+        <a class="btn btn-secondary" href="/categoria/listar">Ver categorias cadastradas</a>
+        <a class="btn btn-secondary" href="/produto/listar">Ver produtos cadastrados</a>
+    </div>
+</div>
+</body>
+</html>

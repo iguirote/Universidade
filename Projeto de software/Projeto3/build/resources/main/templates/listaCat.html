@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Categorias</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="page">
+    <h1>Categorias cadastradas</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+        <tr th:each="c : ${categorias}">
+            <td th:text="${c.id}"></td>
+            <td th:text="${c.nome}"></td>
+            <td><a class="btn btn-warning" th:href="@{/categoria/editar/{id}(id=${c.id})}">Editar</a></td>
+            <td><a class="btn btn-danger" th:href="@{/categoria/confirmar-exclusao/{id}(id=${c.id})}">Excluir</a></td>
+        </tr>
+    </table>
+
+    <div class="nav-links">
+        <a class="btn btn-primary" href="/categoria/formCat">Nova categoria</a>
+        <a class="btn btn-secondary" href="/">Voltar</a>
+    </div>
+</div>
+</body>
+</html>
