@@ -1,0 +1,44 @@
+Problema dos Missionários e Canibais
+
+Há 3 missionários e 3 canibais. Há também um barco que vai da margem esquerda para a margem direita e vice-versa, sempre levando um ou duas pessoas. Todas as pessoas estão na margem esquerda e precisam ir para a margem direita. Porém, há restrições: em momento algum pode ficar mais canibais do que missionários em uma das margens.
+
+ESTADO INICIAL 
+
+ME == 3
+CE == 3
+MD == 0
+CD == 0
+BARCO == ESQUERDA
+
+ESTADO FINAL
+
+ME == 0
+CE == 0
+MD == 3
+CD == 3
+BARCO == DIREITA
+
+if (MissionariosEsquerda == 0 && CanibaisEsquerda == 0 && BARCO == DIREITA)
+{
+    // solução encontrada
+}
+
+ RESTRIÇÃO NESTE CASO É QUE EM NENHUM MOMENTO O CE/CD PODE SER MAIOR QUE ME/MD
+
+if (ME > 0 && CE > ME)
+    estado inválido
+
+if (MD > 0 &&a CD > MD)
+    estado inválido
+
+REGRAS :
+
+1 Missionario
+2 Missionarios
+1 Canibal
+2 Canibais
+1 Missionario + 1 Canibal
+
+VISITADOS :
+
+String visitados = MD + ", " + CD + ", " + ME ", " + CD " - " + BARCO;

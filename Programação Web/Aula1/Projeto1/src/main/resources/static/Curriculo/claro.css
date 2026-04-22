@@ -1,0 +1,170 @@
+
+i {
+    color: rgb(30, 30, 248);
+}
+
+b {
+    color: rgb(91, 91, 248);
+}
+
+.tamanho {
+    font-size: 18px;
+}
+
+body{
+    background:#f1f1f1;
+    margin:0;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:20px;
+    padding:20px;
+    align-items:flex-start;
+}
+
+.esquerda{
+    width:30%;
+    background:white;
+    padding:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.direita{
+    width:70%;
+}
+
+.perfil{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.perfil img{
+    width:80px;
+    border-radius:50%;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.opaco {
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.xlarge {
+    font-size: 15px;
+}
+
+
+#subir{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #2196F3;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.troca {
+    position: fixed;
+    right: 80px;
+    bottom: 20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    
+}
+
+.troca i{
+    font-size:20px;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width: 600px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .esquerda{
+        width:100%;
+    }
+
+    .direita{
+        width:100%;
+    }
+
+}

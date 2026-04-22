@@ -1,0 +1,41 @@
+a {
+    background-color: yellowgreen;
+    cursor: url("./gustavoo.cur"), pointer;
+}
+button {
+     background-color: blueviolet;
+     cursor: url("./gustavoo.cur"), pointer;
+     border-style: dashed;
+     border-radius: 49%;
+ }
+
+table {
+    background-color: blue;
+    cursor: cell;
+}
+
+th {
+    color: yellow;
+    background-color: yellowgreen;
+}
+
+tr {
+    color: white;
+}
+tr:hover {
+    color: whitesmoke;
+    background-color: darkred;
+}
+
+.mycontainer {
+    display: flex;
+}
+
+.mycontainer > div {
+    width: 33%;
+}
+
+.classp {
+    background-color: aqua;
+    float: right;
+}

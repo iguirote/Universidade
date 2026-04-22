@@ -1,0 +1,70 @@
+a {
+    background-color: yellowgreen;
+}
+button {
+     background-color: blueviolet;
+     border-style: dashed;
+     border-radius: 49%;
+ }
+
+table {
+    background-color: blue;
+    cursor: cell;
+}
+
+
+tr {
+    color: white;
+}
+tr:hover {
+    color: whitesmoke;
+    background-color: darkred;
+}
+
+form label {
+    color: brown;
+}
+#sobre {
+    background-color: azure;
+    color: teal;
+}
+
+#habilidades {
+    background-color: coral;
+    color: purple;
+}
+
+#inic {
+}
+
+#ctt {
+
+}
+
+#redes {
+background-color: brown;
+    color: chartreuse;
+}
+
+#Formulario {
+    background-color: whitesmoke;
+    border-style: groove;
+    text-align: center;
+
+}
+
+#meuFormulario {
+    background-color: whitesmoke;
+    border-style: groove;
+    text-align: center;
+}
+#tabela {
+    background-color: black;
+    display: none;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+#tabela td,
+#tabela th {
+    border: 1px solid white;
+}
