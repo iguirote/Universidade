@@ -1,0 +1,28 @@
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg) !important; /* Força o fundo branco sempre */
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+#root {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #08060d;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,59 @@
+/* Container principal do card */
+.cartao {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+
+    /* Sombra preta leve no estado normal */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    /* Transição suave de 0.3s para a expansão e para a sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.cartao:hover {
+    /* Dá a expandida no item */
+    transform: scale(1.05);
+    /* Aumenta a sombra preta para dar impressão de que "saltou" da tela */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* Imagem do produto */
+.Imagem-produto {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Área de texto dentro do card */
+.cartao-conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+    text-align: left;
+    color: #333; /* Força cor escura para ler bem no fundo branco */
+}
+
+.cartao-conteudo h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #111;
+}
+
+.cartao-conteudo p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.cartao-conteudo p strong {
+    font-weight: 600;
+}

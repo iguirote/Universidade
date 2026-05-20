@@ -1,0 +1,12 @@
+.container {
+    padding: 20px;
+}
+
+.grade-cartoes {
+    display: grid;
+    /* auto-fit cria as colunas dinamicamente baseado no tamanho da tela */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Separação entre os cards */
+    width: 100%;
+    margin: 0 auto;
+}
